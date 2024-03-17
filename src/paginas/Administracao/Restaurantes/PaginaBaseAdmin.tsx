@@ -17,25 +17,42 @@ const PaginaBaseAdmin = () => {
                             <Box sx={{ display: 'flex', gap: 2 }}>
 
                                 <Link component={RouterLink} to="/admin/restaurantes/">
-                                    <Button sx={{ my: 2, color: "white" }}>
+                                    <Button sx={{ my: 2, 
+                                        color: "white", 
+                                        fontWeight: 'bold', 
+                                        bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.dark' } }}
+                                    >
                                         Restaurantes
                                     </Button>
                                 </Link>
 
                                 <Link component={RouterLink} to="/admin/restaurantes/novo">
-                                    <Button sx={{ my: 2, color: "white" }}>
+                                    <Button sx={{ my: 2, 
+                                        color: "white", 
+                                        fontWeight: 'bold', 
+                                        bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.dark' } }}
+                                    >
                                         Novo Restaurante
                                     </Button>
                                 </Link>
 
                                 <Link component={RouterLink} to="/admin/pratos">
-                                    <Button sx={{ my: 2, color: "white" }}>
+                                    <Button sx={{ my: 2, 
+                                        color: "white", 
+                                        fontWeight: 'bold', 
+                                        bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.dark' } }}
+                                    >
                                         Pratos
                                     </Button>
                                 </Link>
 
                                 <Link component={RouterLink} to="/admin/pratos/novo">
-                                    <Button sx={{ my: 2, color: "white" }}>
+                                    <Button 
+                                        sx={{ my: 2, 
+                                        color: "white", 
+                                        fontWeight: 'bold', 
+                                        bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.dark' } }}
+                                    >
                                         Novo Prato
                                     </Button>
                                 </Link>
