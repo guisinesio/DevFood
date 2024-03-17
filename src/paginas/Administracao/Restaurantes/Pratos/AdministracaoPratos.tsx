@@ -54,10 +54,13 @@ const AdministracaoPratos = () => {
                             {prato.tag}
                         </TableCell>
                         <TableCell>
-                            [<a href={prato.imagem} target=" blank" rel="noreferrer">Ver Imagem</a>]
+                            <a href={prato.imagem} target=" blank" rel="noreferrer">Visualizar Imagem</a>
                         </TableCell>
                         <TableCell>
-                            [<RouterLink to={`/admin/pratos/${prato.id}`}> Editar</RouterLink> ]
+                            <Button component={RouterLink} to={`/admin/pratos/${prato.id}`} variant="outlined">
+                                Editar
+                            </Button>
+                            {/* [<RouterLink to={`/admin/pratos/${prato.id}`}> Editar</RouterLink> ] */}
                         </TableCell>
                         <TableCell>
                             <Button variant="outlined" color="error" onClick={() => excluir(prato)}>

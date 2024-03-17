@@ -45,7 +45,10 @@ const AdministracaoRestaurantes = () => {
                             {restaurante.nome}
                         </TableCell>
                         <TableCell>
-                            [<RouterLink to={`/admin/restaurantes/${restaurante.id}`}> Editar</RouterLink> ]
+                            <Button component={RouterLink} to={`/admin/restaurantes/${restaurante.id}`} variant="outlined">
+                                Editar
+                            </Button>
+                            {/* [<RouterLink to={`/admin/restaurantes/${restaurante.id}`}> Editar</RouterLink> ] */}
                         </TableCell>
                         <TableCell>
                             <Button variant="outlined" color="error" onClick={() => excluir(restaurante)}>

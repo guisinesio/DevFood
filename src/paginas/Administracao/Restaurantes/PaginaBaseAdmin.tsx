@@ -1,6 +1,6 @@
 import { AppBar, Box, Button, Container, Toolbar, Typography, Link, Paper } from "@mui/material"
 
-import {Outlet, Link as RouterLink} from 'react-router-dom'
+import { Outlet, Link as RouterLink } from 'react-router-dom'
 
 const PaginaBaseAdmin = () => {
     return (
@@ -8,35 +8,39 @@ const PaginaBaseAdmin = () => {
             <AppBar position="static">
                 <Container maxWidth="xl">
                     <Toolbar>
-                        <Typography variant="h6">
-                            Administração
-                        </Typography>
-                        <Box sx={{ display: 'flex', flexGrow: 1 }}>
-                            
-                            <Link component={RouterLink} to="/admin/restaurantes/">
-                                <Button sx={{ my: 2, color: "white" }}>
-                                    Restaurantes
-                                </Button>
-                            </Link>
+                        <Link component={RouterLink} to="/admin/" underline="none"> 
+                            <Typography variant="h4" sx={{ color: 'white', textDecoration: 'none' }}> 
+                                Área Administrativa - DevFood
+                            </Typography>
+                        </Link>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1 }}>
+                            <Box sx={{ display: 'flex', gap: 2 }}>
 
-                            <Link component={RouterLink} to="/admin/restaurantes/novo">
-                                <Button sx={{ my: 2, color: "white" }}>
-                                    Novo Restaurante
-                                </Button>
-                            </Link>
+                                <Link component={RouterLink} to="/admin/restaurantes/">
+                                    <Button sx={{ my: 2, color: "white" }}>
+                                        Restaurantes
+                                    </Button>
+                                </Link>
 
-                            <Link component={RouterLink} to="/admin/pratos">
-                                <Button sx={{ my: 2, color: "white" }}>
-                                    Pratos
-                                </Button>
-                            </Link>
+                                <Link component={RouterLink} to="/admin/restaurantes/novo">
+                                    <Button sx={{ my: 2, color: "white" }}>
+                                        Novo Restaurante
+                                    </Button>
+                                </Link>
 
-                            <Link component={RouterLink} to="/admin/pratos/novo">
-                                <Button sx={{ my: 2, color: "white" }}>
-                                    Novo Prato
-                                </Button>
-                            </Link>
+                                <Link component={RouterLink} to="/admin/pratos">
+                                    <Button sx={{ my: 2, color: "white" }}>
+                                        Pratos
+                                    </Button>
+                                </Link>
 
+                                <Link component={RouterLink} to="/admin/pratos/novo">
+                                    <Button sx={{ my: 2, color: "white" }}>
+                                        Novo Prato
+                                    </Button>
+                                </Link>
+
+                            </Box>
                         </Box>
                     </Toolbar>
                 </Container>
@@ -44,7 +48,7 @@ const PaginaBaseAdmin = () => {
             <Box>
                 <Container maxWidth="lg" sx={{ mt: 1 }}>
                     <Paper sx={{ p: 2 }}>
-                        <Outlet/>
+                        <Outlet />
                     </Paper>
                 </Container>
             </Box>
