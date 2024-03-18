@@ -3,7 +3,7 @@ import estilos from './Rodape.module.scss';
 const NavBar = () => {
   return (<footer className={estilos.Rodape}>
     <div>
-      <p>Copyright &copy; {new Date().getFullYear()} Alfood</p>
+      <p>Copyright &copy; {new Date().getFullYear()} DevFood</p>
     </div>
     <div>
       <ul className="social-icons">
@@ -15,7 +15,7 @@ const NavBar = () => {
       </ul>
     </div>
     <div>
-      <p>Uma alegria <em>a cada prato</em></p>
+      <p>Uma alegria <em>a cada prato</em>!</p>
     </div>
   </footer>)
 }
