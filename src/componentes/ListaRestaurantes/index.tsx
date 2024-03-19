@@ -5,6 +5,7 @@ import IRestaurante from '../../interfaces/IRestaurante';
 import style from './ListaRestaurantes.module.scss';
 import Restaurante from './Restaurante';
 import { Button, Paper, TextField } from '@mui/material';
+import styled from '@emotion/styled';
 
 interface IParametrosBusca {
   ordering?: string
@@ -121,12 +122,21 @@ const ListaRestaurantes = () => {
       </Paper>
     </div>
     {restaurantes?.map(item => <Restaurante restaurante={item} key={item.id} />)}
-    {<button onClick={() => carregarDados(paginaAnterior)} disabled={!paginaAnterior}>
+    <div className={style.buttonPaginacao}>
+      {<Button onClick={() => carregarDados(paginaAnterior)} disabled={!paginaAnterior}>
+        Pagina Anterior
+      </Button>}
+
+      {<Button onClick={() => carregarDados(proximaPagina)} disabled={!proximaPagina}>
+        Próxima Página
+      </Button>}
+    </div>
+    {/* {<button onClick={() => carregarDados(paginaAnterior)} disabled={!paginaAnterior}>
       Página Anterior
     </button>}
     {<button onClick={() => carregarDados(proximaPagina)} disabled={!proximaPagina}>
       Próxima página
-    </button>}
+    </button>} */}
   </section>
   )
 }

@@ -74,6 +74,10 @@ const FormularioPrato = () => {
                 http.patch(`pratos/${parametros.id}/`, formData)
                     .then(() => {
                         alert("Prato atualizado com sucesso.");
+                        setNomePrato('');
+                        setDescricaoPrato('');
+                        setTag('');
+                        setRestaurante('');
                     })
                     .catch(erro => console.log(erro));
             } else {
